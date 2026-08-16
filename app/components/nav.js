@@ -27,9 +27,9 @@ export default function Navigation(){
                             <Link href="/traditions" className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl">Traditions</Link>
                         </li>
 
-                        <li>
+                        {/*<li>
                             <Link href="/events" className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl">Events</Link>
-                        </li>
+                        </li>*/}
 
                         <li>
                             <Link href="/history" className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl">History</Link>
