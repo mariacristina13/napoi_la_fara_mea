@@ -47,7 +47,7 @@ export default function Home() {
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
             />
             <Link href="/learn" className="text-rose-950">
-              <p className="bg-yellow-500 text-center text-base rounded-lg md:text-xl sm:text-lg">Learn aromanian</p>
+              <p className="bg-yellow-500 text-center text-base rounded-sm md:text-xl sm:text-lg">Learn aromanian</p>
             </Link>
           </div>
 
@@ -61,7 +61,7 @@ export default function Home() {
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
             />
             <Link href="/history" className="text-rose-950">
-              <p className="bg-yellow-500 text-center text-base rounded-lg md:text-xl sm:text-lg">History</p>
+              <p className="bg-yellow-500 text-center text-base rounded-sm md:text-xl sm:text-lg">History</p>
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ export default function Home() {
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
             />
             <Link href="/traditions" className="text-rose-950">
-              <p className="bg-yellow-500 text-center text-base rounded-lg md:text-xl sm:text-lg">Traditions</p>
+              <p className="bg-yellow-500 text-center text-base rounded-sm md:text-xl sm:text-lg">Traditions</p>
             </Link>
           </div>
 
