@@ -1,11 +1,19 @@
-import Image from "next/image";
+"use client"
+
+import Image from "next/image"
 import Link from "next/link"
+import EmblaCarousel from "./components/carousel/EmblaCarousel"
+
+const OPTIONS = { dragFree: true, loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 export default function Home() {
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-orange-50 font-sans">
       <header className="relative w-full bg-rose-950 text-orange-50">
-    
+
         <video autoPlay muted loop className="w-full h-[700px] object-cover border-0 overlay-black">
           <source src="/head_video.mp4" type="video/mp4" />
         </video>
@@ -24,49 +32,49 @@ export default function Home() {
           </Link>
         </div>
       </header>
-      
+
       <main className="w-full max-w-3xl py-32 bg-orange-50">
         <h2 className="text-rose-950 text-center mb-10 text-3xl md:text-5xl">Discover</h2>
         <div className="grid grid-cols-1 gap-5 items-center sm:grid-cols-2 md:grid-cols-3">
-          
+
           <div className="pl-10 max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
-            <Image 
-            src="/learn.jpg"
-            alt= "Learn aromanian"
-            width={500}
-            height={500} 
-            className="w-auto h-auto m-auto md:w-500 h-500"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
+            <Image
+              src="/learn.jpg"
+              alt="Learn aromanian"
+              width={500}
+              height={500}
+              className="w-auto h-auto m-auto md:w-[500px] h-[px]"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
             />
-            <Link href= "/learn" className="text-rose-950">
+            <Link href="/learn" className="text-rose-950">
               <p className="bg-yellow-500 text-center text-base rounded-lg md:text-xl sm:text-lg">Learn aromanian</p>
             </Link>
           </div>
 
           <div className="pl-10 max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
-            <Image 
-            src="/learn.jpg"
-            alt= "Learn aromanian"
-            width={500}
-            height={500}
-            className="w-auto h-auto m-auto md:w-500 h-500"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw" 
+            <Image
+              src="/learn.jpg"
+              alt="Learn aromanian"
+              width={500}
+              height={500}
+              className="w-auto h-auto m-auto md:w-500 h-500"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
             />
-            <Link href= "/history" className="text-rose-950">
+            <Link href="/history" className="text-rose-950">
               <p className="bg-yellow-500 text-center text-base rounded-lg md:text-xl sm:text-lg">History</p>
             </Link>
           </div>
 
           <div className="pl-10 max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
-            <Image 
-            src="/learn.jpg"
-            alt= "Learn aromanian"
-            width={500}
-            height={500}
-            className="w-auto h-auto m-auto md:w-500 h-500"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
+            <Image
+              src="/learn.jpg"
+              alt="Learn aromanian"
+              width={500}
+              height={500}
+              className="w-auto h-auto m-auto md:w-500 h-500"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
             />
-            <Link href= "/traditions" className="text-rose-950">
+            <Link href="/traditions" className="text-rose-950">
               <p className="bg-yellow-500 text-center text-base rounded-lg md:text-xl sm:text-lg">Traditions</p>
             </Link>
           </div>
@@ -76,7 +84,7 @@ export default function Home() {
         <div className="flex flex-col items-center mt-20">
           <h2 className="text-rose-950 text-center mb-10 text-3xl md:text-5xl">Gallery</h2>
 
-
+          <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
         </div>
       </main>
     </div>
