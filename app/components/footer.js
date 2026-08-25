@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer(){
     return(
@@ -11,7 +12,7 @@ export default function Footer(){
                     height={50}
                 />
                 <p className="text-sm p-4">&copy; 2026 Nãpoi la Fara Mea. All rights reserved.</p>
-                
+                <Link href="/about">About developer</Link>
             </div>
         </footer>
     )
