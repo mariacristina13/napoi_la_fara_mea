@@ -61,13 +61,20 @@ export default function Alphabet(){
                     </li>
                 </ul>
 
-                <Link href="https://www.omniglot.com/writing/aromanian.htm" className="m-2 text-base font-bold text-rose-950 md:text-xl sm: m-3 text-lg">
-                    Omniglot: Aromanian
-                </Link>
+                <div>
+                    <h3 className="m-2 pb-5 text-yellow-600 font-bold text-lg sm:m-3 text-xl md:pb-10 text-2xl">
+                        Useful links:
+                    </h3>
 
-                <p className="text-yellow-950 pb-5 text-sm m-2 md:pb-10 text-lg sm:m-3 text-base">
-                    An overview of the Aromanian alphabet and pronunciation system. It also works as a hub, linking out to several of the dictionaries, aromanian music videos and natives speaking the language.
-                </p>
+                    <Link href="https://www.omniglot.com/writing/aromanian.htm" className="m-2 text-base font-bold text-rose-950 md:text-xl sm: m-3 text-lg">
+                        Omniglot: Aromanian
+                    </Link>
+
+                    <p className="text-yellow-950 pb-5 text-sm m-2 md:pb-10 text-lg sm:m-3 text-base">
+                        An overview of the Aromanian alphabet and pronunciation system. It also works as a hub, linking out to several of the dictionaries, aromanian music videos and natives speaking the language.
+                    </p>
+                </div>
+
             </main>
         </div>
     )
