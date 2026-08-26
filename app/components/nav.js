@@ -36,14 +36,14 @@ export default function Navigation(){
 
                     <div className="hidden md:flex flex-row gap-5 p-4">
                         <li className="flex flex-wrap gap-4">
-                            <Link href="/learn" className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl">
-                                <p className="text-sm sm:text-sm">Learn Aromanian</p>
+                            <Link href="/learn" className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl">
+                                <p className="text-sm">Learn Aromanian</p>
                             </Link>
                         </li>
 
                         <li className="flex flex-wrap gap-4">
-                            <Link href="/traditions" className="btn hover:bg-yellow-600 border p-5 border-rose-950 rounded-xl">
-                            <p className="sm:text-sm">Traditions</p>
+                            <Link href="/traditions" className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl">
+                            <p className="text-sm">Traditions</p>
                             </Link>
                         </li>
 
@@ -52,8 +52,8 @@ export default function Navigation(){
                         </li>*/}
 
                         <li className="flex flex-wrap gap-4">
-                            <Link href="/history" className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl">
-                                <p className="text-sm sm:text-sm">History</p>
+                            <Link href="/history" className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl">
+                                <p className="text-sm">History</p>
                             </Link>
                         </li>
                     </div>
@@ -63,19 +63,19 @@ export default function Navigation(){
                 <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60" : "max-h-0"}`}>
                     <div className="flex flex-col items-center gap-3 px-4 pb-4">
                         <li>
-                            <Link href="/learn" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 p-2 border border-rose-950 rounded-xl block">
+                            <Link href="/learn" onClick={() => setIsOpen(false)} className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl block">
                                 <p className="text-xs">Learn Aromanian</p>
                             </Link>
                         </li>
 
                         <li>
-                            <Link href="/traditions" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 border p-2 border-rose-950 rounded-xl block">
+                            <Link href="/traditions" onClick={() => setIsOpen(false)} className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl block">
                                 <p className="text-xs">Traditions</p>
                             </Link>
                         </li>
 
                         <li>
-                            <Link href="/history" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 p-2 border border-rose-950 rounded-xl block">
+                            <Link href="/history" onClick={() => setIsOpen(false)} className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl block">
                                 <p className="text-xs">History</p>
                             </Link>
                         </li>
