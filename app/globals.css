@@ -3,6 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --detail-medium-contrast: #A29C1F;
+    /* arrow border, inactive dot ring */
+    --detail-high-contrast: #a8a29e;
+    /* disabled arrow color */
+    --text-body: #4c0519;
+    /* arrow icon, active dot fill */
+    --text-high-contrast-rgb-value: 76, 5, 25;
+
+    --dot-inactive: #d6d3d1;
 }
 
 @theme inline {
@@ -16,15 +26,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --detail-medium-contrast: #A29C1F;
-    /* arrow border, inactive dot ring */
-    --detail-high-contrast: #a8a29e;
-    /* disabled arrow color */
-    --text-body: #4c0519;
-    /* arrow icon, active dot fill */
-    --text-high-contrast-rgb-value: 76, 5, 25;
-
-    --dot-inactive: #d6d3d1;
   }
 }
 
