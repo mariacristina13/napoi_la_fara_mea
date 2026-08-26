@@ -84,7 +84,7 @@ export default function Learn() {
                             className="w-auto h-auto m-auto md:w-[500px] h-[500px]"
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
-                        <Link href="/quizes" className="text-rose-950">
+                        <Link href="/quizzes" className="text-rose-950">
                             <p className="bg-yellow-500 text-center text-sm rounded-sm md:text-lg sm:text-base">Quizes & Practice</p>
                         </Link>
                     </div>
