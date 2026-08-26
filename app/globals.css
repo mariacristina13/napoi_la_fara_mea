@@ -37,6 +37,7 @@ body {
 .embla {
   max-width: 48rem;
   margin: auto;
+  padding: 0 1rem;
 
   --slide-height: 19rem;
   --slide-spacing: 1rem;
@@ -190,4 +191,37 @@ body {
   max-width: none;
   flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
   object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .embla__button {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-width: 0.15rem;
+  }
+
+  .embla__dot {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .embla__dot:before,
+  .embla__dot:after {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .embla__buttons {
+    gap: 0.4rem;
+  }
+
+  .embla__controls {
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .embla {
+    margin: auto;
+    padding: 0 1.2rem;
+  }
 }
