@@ -9,7 +9,7 @@ export default function Alphabet(){
                 </div>
             </header>
 
-            <main className="w-full max-w-3xl py-8 bg-orange-50 flex-1">
+            <main className="w-full max-w-3xl p-5 py-8">
 
                 <p className="text-yellow-950 pb-5 text-sm m-2 md:pb-10 text-lg sm:m-3 text-base">
                     The Aromanian alphabet is a variant of the Latin script, but it hasn't always been written that way. <cite index="15-1">The earliest known Aromanian writing dates back to manuscripts from the 9th century, and for much of its history the language was written using Greek and Cyrillic scripts</cite> before shifting toward Latin-based systems. <cite index="18-1"></cite>

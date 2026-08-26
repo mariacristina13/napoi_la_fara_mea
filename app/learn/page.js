@@ -13,7 +13,7 @@ export default function Learn() {
                 </div>
             </header>
             
-            <main className="w-full max-w-3xl py-8 bg-orange-50">
+            <main className="w-full max-w-3xl p-5 py-8">
                 <div>
                     <h3 className="m-2 pb-5 text-rose-950 font-bold text-lg sm:m-3 text-xl md:pb-10 text-2xl">
                         History of the Aromanian Language
