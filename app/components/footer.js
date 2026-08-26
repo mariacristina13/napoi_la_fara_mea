@@ -10,9 +10,10 @@ export default function Footer(){
                     alt="logo"
                     width={200}
                     height={50}
+                    className="w-24 h-auto sm:w-32 md:w-[200px]"
                 />
-                <p className="text-sm p-4">&copy; 2026 Nãpoi la Fara Mea. All rights reserved.</p>
-                <Link href="/about">About developer</Link>
+                <p  className="text-orange-50 text-xs m-2 md:text-base sm:m-3 text-sm">&copy; 2026 Nãpoi la Fara Mea. All rights reserved.</p>
+                <Link href="/about" className="text-orange-50 text-xs m-2 md:text-base sm:m-3 text-sm">About developer</Link>
             </div>
         </footer>
     )
