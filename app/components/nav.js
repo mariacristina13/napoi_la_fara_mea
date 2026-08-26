@@ -18,6 +18,7 @@ export default function Navigation(){
                                 alt="logo"
                                 width={150}
                                 height={34}
+                                className="w-24 h-auto sm:w-32 md:w-[150px]"
                             />
                         </Link>
                     </li>
