@@ -17,11 +17,11 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --detail-medium-contrast: #A29C1F;
-    /* rose-950 - arrow border, inactive dot ring */
+    /* arrow border, inactive dot ring */
     --detail-high-contrast: #a8a29e;
-    /* muted gray - disabled arrow color */
+    /* disabled arrow color */
     --text-body: #4c0519;
-    /* yellow-600 - arrow icon, active dot fill */
+    /* arrow icon, active dot fill */
     --text-high-contrast-rgb-value: 76, 5, 25;
 
     --dot-inactive: #d6d3d1;
