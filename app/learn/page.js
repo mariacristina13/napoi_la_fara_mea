@@ -42,7 +42,7 @@ export default function Learn() {
                     </h3>
 
                     <p className="text-yellow-950 pb-5 text-sm m-2 md:pb-10 text-lg sm:m-3 text-base">
-                        The language is spoken by an aging population, with fewer young people learning it at home, and no single country where it holds full official status. <cite index="7-1">UNESCO's 2010 Atlas of the World's Languages in Danger classifies it as 'highly endangered'.</cite> Which represents a real risk of the language disappearing within a generation or two.
+                        The language is spoken by an aging population, with fewer young people learning it at home, and no single country where it holds full official status. <cite index="7-1">UNESCO's 2010 Atlas of the World's Languages in Danger classifies it as highly endangered.</cite> Which represents a real risk of the language disappearing within a generation or two.
                     </p>
                 </div>
 
