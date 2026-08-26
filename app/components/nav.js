@@ -63,20 +63,20 @@ export default function Navigation(){
                 <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60" : "max-h-0"}`}>
                     <div className="flex flex-col items-center gap-3 px-4 pb-4">
                         <li>
-                            <Link href="/learn" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl block">
-                                <p className="text-sm">Learn Aromanian</p>
+                            <Link href="/learn" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 p-2 border border-rose-950 rounded-xl block">
+                                <p className="text-xs">Learn Aromanian</p>
                             </Link>
                         </li>
 
                         <li>
-                            <Link href="/traditions" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 border p-4 border-rose-950 rounded-xl block">
-                                <p className="text-sm">Traditions</p>
+                            <Link href="/traditions" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 border p-2 border-rose-950 rounded-xl block">
+                                <p className="text-xs">Traditions</p>
                             </Link>
                         </li>
 
                         <li>
-                            <Link href="/history" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl block">
-                                <p className="text-sm">History</p>
+                            <Link href="/history" onClick={() => setIsOpen(false)} className="btn hover:bg-yellow-600 p-2 border border-rose-950 rounded-xl block">
+                                <p className="text-xs">History</p>
                             </Link>
                         </li>
                     </div>
