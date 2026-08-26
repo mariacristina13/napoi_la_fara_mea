@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function Learn() {
     return (
-        <div className="flex flex-col flex-1 items-center justify-center bg-orange-50 font-sans">
+        <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-orange-50 font-sans">
             <header>
                 <div className="flex flex-col items-center justify-start pt-5 gap-2 text-center">
                     <h1 className="text-base font-bold text-yellow-600 md:text-4xl sm:text-2xl">Learn Aromainian</h1>
@@ -42,7 +42,7 @@ export default function Learn() {
                     </h3>
 
                     <p className="text-yellow-950 pb-5 text-sm m-2 md:pb-10 text-lg sm:m-3 text-base">
-                        The language is spoken by an aging population, with fewer young people learning it at home, and no single country where it holds full official status. <cite>UNESCO's 2010 Atlas of the World's Languages in Danger classifies it as 'highly endangered'.</cite> Which represents a real risk of the language disappearing within a generation or two.
+                        The language is spoken by an aging population, with fewer young people learning it at home, and no single country where it holds full official status. <cite index="7-1">UNESCO's 2010 Atlas of the World's Languages in Danger classifies it as 'highly endangered'.</cite> Which represents a real risk of the language disappearing within a generation or two.
                     </p>
                 </div>
 
@@ -56,7 +56,7 @@ export default function Learn() {
                             className="w-auto h-auto m-auto md:w-[500px] h-[500px]"
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
-                        <Link href="/learn" className="text-rose-950">
+                        <Link href="/alphabet" className="text-rose-950">
                             <p className="bg-yellow-500 text-center text-sm rounded-sm md:text-lg sm:text-base">Alphabet</p>
                         </Link>
                     </div>
@@ -70,7 +70,7 @@ export default function Learn() {
                             className="w-auto h-auto m-auto md:w-[500px] h-[500px]"
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
-                        <Link href="/history" className="text-rose-950">
+                        <Link href="/dictionaries" className="text-rose-950">
                             <p className="bg-yellow-500 text-center text-sm rounded-sm md:text-lg sm:text-base">Dictionaries & Translations</p>
                         </Link>
                     </div>
@@ -84,7 +84,7 @@ export default function Learn() {
                             className="w-auto h-auto m-auto md:w-[500px] h-[500px]"
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
-                        <Link href="/traditions" className="text-rose-950">
+                        <Link href="/quizes" className="text-rose-950">
                             <p className="bg-yellow-500 text-center text-sm rounded-sm md:text-lg sm:text-base">Quizes & Practice</p>
                         </Link>
                     </div>
