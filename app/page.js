@@ -11,7 +11,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function Home() {
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-orange-50 font-sans">
+    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-orange-50 font-sans">
       <header className="relative w-full bg-rose-950 text-orange-50">
 
         <video autoPlay muted loop className="w-full h-[700px] object-cover border-0 overlay-black">
