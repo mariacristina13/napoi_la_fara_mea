@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Quizes() {
+export default function Quizzes() {
     return (
         <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-orange-50 font-sans">
             <header>
