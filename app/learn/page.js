@@ -8,8 +8,8 @@ export default function Learn() {
         <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-orange-50 font-sans">
             <header>
                 <div className="flex flex-col items-center justify-start pt-5 gap-2 text-center">
-                    <h1 className="text-base font-bold text-yellow-600 md:text-4xl sm:text-2xl">Learn Aromainian</h1>
-                    <h2 className="text-sm font-bold text-rose-950 pb-10 md:text-2xl sm:text-base">A collection of resources, dictionaries, quizes and practice sheets</h2>
+                    <h1 className="text-base font-bold text-yellow-600 md:text-3xl sm:text-2xl">Learn Aromainian</h1>
+                    <h2 className="text-sm font-bold text-rose-950 pb-10 md:text-xl sm:text-base">A collection of resources, dictionaries, quizes and practice sheets</h2>
                 </div>
             </header>
             
@@ -57,7 +57,7 @@ export default function Learn() {
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
                         <Link href="/alphabet" className="text-rose-950">
-                            <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-lg sm:text-base">Alphabet</p>
+                            <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-base sm:text-sm">Alphabet</p>
                         </Link>
                     </div>
 
@@ -71,7 +71,7 @@ export default function Learn() {
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
                         <Link href="/dictionaries" className="text-rose-950">
-                            <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-lg sm:text-base">Dictionaries & Translations</p>
+                            <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-base sm:text-sm">Dictionaries & Translations</p>
                         </Link>
                     </div>
 
@@ -85,7 +85,7 @@ export default function Learn() {
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
                         />
                         <Link href="/quizzes" className="text-rose-950">
-                            <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-lg sm:text-base">Quizes & Practice</p>
+                            <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-base sm:text-sm">Quizes & Practice</p>
                         </Link>
                     </div>
 

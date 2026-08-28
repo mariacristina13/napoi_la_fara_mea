@@ -25,64 +25,66 @@ export default function Home() {
           <h2 className="text-sm font-bold text-orange-50 md:text-2xl sm:text-base">Journey Back To Aromanian Heritage</h2>
         </div>
 
-        <div className="absolute inset-0 z-20 flex flex-row justify-between items-end h-full p-8">
-          <h2 className="mt-2 text-xl md:text-base sm:text-xs">Come along on a journey that will take you through decades of <span className="font-bold text-yellow-600">history...</span></h2>
-          <Link href="https://www.youtube.com/watch?v=WL_WINNT6hE" className="text-xs text-lime-600 hover:text-lime-400 transition-colors duration-300 md:text-sm">
+        <div className="absolute inset-0 z-20 flex flex-row justify-between items-end gap-2 h-full p-8">
+          <h2 className="mt-2 text-xs md:text-base sm:text-sm">Come along on a journey that will take you through decades of <span className="font-bold text-yellow-600">history...</span></h2>
+          <Link href="https://www.youtube.com/watch?v=WL_WINNT6hE" className="text-[10px] text-lime-600 hover:text-lime-400 transition-colors duration-300 md:text-sm sm:text-xs">
             Video source
           </Link>
         </div>
       </header>
 
       <main className="w-full max-w-3xl py-32 bg-orange-50">
-        <h2 className="text-rose-950 text-center mb-10 text-3xl md:text-5xl">Discover</h2>
-        <div className="grid grid-cols-1 gap-5 items-center sm:grid-cols-2 md:grid-cols-3">
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-rose-950 text-center mb-10 text-2xl md:text-4xl sm:text-3xl">Discover</h2>
+          <div className="grid grid-cols-1 gap-5 items-center sm:grid-cols-2 md:grid-cols-3">
 
-          <div className="pl-10 max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
-            <Image
-              src="/learn.jpg"
-              alt="Learn aromanian"
-              width={500}
-              height={500}
-              className="w-auto h-auto m-auto md:w-[500px] h-[px]"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
-            />
-            <Link href="/learn" className="text-rose-950">
-              <p className="bg-yellow-500 text-center text-base rounded-sm md:text-xl sm:text-lg">Learn aromanian</p>
-            </Link>
+            <div className="max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
+              <Image
+                src="/learn.jpg"
+                alt="Learn aromanian"
+                width={500}
+                height={500}
+                className="w-auto h-auto m-auto md:w-[500px] h-[px]"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
+              />
+              <Link href="/learn" className="text-rose-950">
+                <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-base sm:text-sm">Learn aromanian</p>
+              </Link>
+            </div>
+
+            <div className="max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
+              <Image
+                src="/learn.jpg"
+                alt="Learn aromanian"
+                width={500}
+                height={500}
+                className="w-auto h-auto m-auto md:w-500 h-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
+              />
+              <Link href="/history" className="text-rose-950">
+                <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-base sm:text-sm">History</p>
+              </Link>
+            </div>
+
+            <div className="max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
+              <Image
+                src="/learn.jpg"
+                alt="Learn aromanian"
+                width={500}
+                height={500}
+                className="w-auto h-auto m-auto md:w-500 h-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
+              />
+              <Link href="/traditions" className="text-rose-950">
+                <p className="bg-yellow-500 text-center text-xs rounded-sm md:text-base sm:text-sm">Traditions</p>
+              </Link>
+            </div>
+
           </div>
-
-          <div className="pl-10 max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
-            <Image
-              src="/learn.jpg"
-              alt="Learn aromanian"
-              width={500}
-              height={500}
-              className="w-auto h-auto m-auto md:w-500 h-500"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
-            />
-            <Link href="/history" className="text-rose-950">
-              <p className="bg-yellow-500 text-center text-base rounded-sm md:text-xl sm:text-lg">History</p>
-            </Link>
-          </div>
-
-          <div className="pl-10 max-w-[280px] mx-auto sm:max-w-[350px] md:pl-5">
-            <Image
-              src="/learn.jpg"
-              alt="Learn aromanian"
-              width={500}
-              height={500}
-              className="w-auto h-auto m-auto md:w-500 h-500"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, 33vw"
-            />
-            <Link href="/traditions" className="text-rose-950">
-              <p className="bg-yellow-500 text-center text-base rounded-sm md:text-xl sm:text-lg">Traditions</p>
-            </Link>
-          </div>
-
         </div>
 
         <div className="flex flex-col items-center mt-20">
-          <h2 className="text-rose-950 text-center mb-10 text-3xl md:text-5xl">Gallery</h2>
+          <h2 className="text-rose-950 text-center mb-10 text-2xl md:text-4xl sm:text-3xl">Gallery</h2>
 
           <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
         </div>
