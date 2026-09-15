@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Birth() {
     return (
         <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-orange-50 font-sans">
@@ -156,6 +158,20 @@ export default function Birth() {
                         <cite className="text-yellow-600">Aromânii. Credințe și obiceiuri, Irina Nicolau, 2001, pg.72</cite>.
                     </p>
                 </div>
+
+                <p className="m-2 text-rose-950 font-bold text-lg sm:m-3 text-xl md:text-2xl">
+                    Sources: 
+                </p>
+
+                <ul className="pb-10">
+                    <li>
+                        <Link href="https://www.proiectavdela.ro/pdf/irina_nicolau_aromanii_credinte_si_obiceiuri.pdf">
+                           <p className="text-yellow-950 text-sm m-2 md:text-lg sm:m-3 text-base">
+                                Aromânii. Credințe și obiceiuri, Irina Nicolau, 2001
+                           </p>
+                        </Link>
+                    </li>
+                </ul>
             </main>
         </div>
     )
