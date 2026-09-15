@@ -27,9 +27,7 @@ export default function Alphabet(){
                    That finally changed in the late 20th century: <cite index="14-1">the alphabet used today was proposed in 1997 at the Symposium for Standardisation of the Aromanian Writing System in Bitola, North Macedonia, revised in 1999, and has since been adopted by most Aromanian writers across North Macedonia, Serbia, Albania, Bulgaria, and Romania.</cite>
                 </p>
 
-                <p className="text-yellow-950 pb-5 text-sm m-2 md:pb-10 text-lg sm:m-3 text-base">
-                   
-                </p>
+       
 
                 <p className="m-2 text-rose-950 font-bold text-lg sm:m-3 text-xl md:text-2xl">
                     Sources: 
