@@ -9,7 +9,7 @@ export default function Learn() {
             <header>
                 <div className="flex flex-col items-center justify-start pt-5 gap-2 text-center">
                     <h1 className="text-base font-bold text-yellow-600 md:text-3xl sm:text-2xl">Learn Aromainian</h1>
-                    <h2 className="text-sm font-bold text-rose-950 pb-10 md:text-xl sm:text-base">A collection of resources, dictionaries, quizes and practice sheets</h2>
+                    <h2 className="text-sm font-bold text-rose-950 md:text-xl sm:text-base">A collection of resources, dictionaries, quizes and practice sheets</h2>
                 </div>
             </header>
             
