@@ -1,5 +1,7 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Ornament, EmbroideryBand } from "./ornament"
+import { LEARN_HEADER_IMAGE } from "./headerImages"
 
 // Shared pieces for the pages under "Learn Aromanian" (alphabet, dictionaries, quizzes).
 
@@ -8,8 +10,17 @@ export const ROMAN_NUMERALS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII",
 export function LearnHeader({ label, labelLang, title, children }) {
     return (
         <>
-            <header className="bg-rose-950">
-                <div className="mx-auto max-w-5xl px-5 pt-8 pb-16 text-center">
+            <header className="relative overflow-hidden bg-rose-950">
+                <Image
+                    src={LEARN_HEADER_IMAGE}
+                    alt=""
+                    fill
+                    priority
+                    className="object-cover opacity-25 blur-xs"
+                    sizes="100vw"
+                />
+                <div aria-hidden className="absolute inset-0 bg-linear-to-b from-rose-950/70 via-rose-950/40 to-rose-950" />
+                <div className="relative mx-auto max-w-5xl px-5 pt-8 pb-16 text-center">
                     <Link href="/learn" className="group flex w-fit items-center gap-1 text-sm text-gold hover:text-orange-50 transition-colors">
                         <span aria-hidden className="mx-1 h-2 w-2 -rotate-45 border-t-2 border-l-2 border-current transition-transform group-hover:-translate-x-1" />
                         Learn Aromanian

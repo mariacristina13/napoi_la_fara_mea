@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import BackToTop from "./backToTop"
 import { Ornament, EmbroideryBand } from "./ornament"
+import { TRADITIONS_HEADER_IMAGE, TRADITIONS_HEADER_IMAGE_STYLE } from "./headerImages"
 
 const ROMAN_NUMERALS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
 
@@ -88,11 +89,11 @@ export function TraditionHeader({ title, intro, label = "Customs and beliefs" })
         <>
             <header className="relative w-full overflow-hidden bg-rose-950">
                 <Image
-                    src="/learn.jpg"
+                    src={TRADITIONS_HEADER_IMAGE}
                     alt=""
                     fill
                     priority
-                    className="object-cover opacity-25 blur-xs"
+                    className={TRADITIONS_HEADER_IMAGE_STYLE}
                     sizes="100vw"
                 />
                 <div aria-hidden className="absolute inset-0 bg-linear-to-b from-rose-950/70 via-rose-950/40 to-rose-950" />

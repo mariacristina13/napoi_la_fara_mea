@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { LEARN_HEADER_IMAGE } from "../components/headerImages"
 import { Ornament, EmbroideryBand } from "../components/ornament"
 
 const RESOURCES = [
@@ -41,7 +42,7 @@ export default function Learn() {
         <div className="flex flex-col flex-1 min-h-screen bg-orange-50 font-sans">
             <header className="relative overflow-hidden bg-rose-950">
                 <Image
-                    src="/learn.jpg"
+                    src={LEARN_HEADER_IMAGE}
                     alt=""
                     fill
                     priority
