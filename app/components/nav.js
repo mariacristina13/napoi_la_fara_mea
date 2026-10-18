@@ -18,10 +18,10 @@ function NavLink({ href, label, isActive, onClick }) {
             href={href}
             onClick={onClick}
             aria-current={isActive ? "page" : undefined}
-            className={`group relative block py-2 text-sm transition-colors hover:text-gold ${isActive ? "text-gold" : "text-orange-50"}`}
+            className={`group relative block py-1 font-serif text-lg transition-colors hover:text-gold ${isActive ? "text-gold" : "text-orange-50"}`}
         >
             {label}
-            <span aria-hidden className={`absolute bottom-0 left-0 h-0.5 w-full origin-center rounded-full bg-gold transition-transform duration-300 group-hover:scale-x-100 ${isActive ? "scale-x-100" : "scale-x-0"}`} />
+            <span aria-hidden className={`absolute -bottom-0.5 left-0 h-px w-full origin-center bg-gold transition-transform duration-300 group-hover:scale-x-100 ${isActive ? "scale-x-100" : "scale-x-0"}`} />
         </Link>
     )
 }
@@ -31,7 +31,7 @@ export default function Navigation(){
     const pathname = usePathname();
     
     return(
-        <nav className="bg-rose-950">
+        <nav className="border-b-4 border-double border-gold/60 bg-rose-950 px-2 sm:px-4">
             <ul>
                 <div className="flex flex-row justify-between items-center">
                     <li>
@@ -53,14 +53,15 @@ export default function Navigation(){
                         className="md:hidden flex flex-col gap-1.5 p-2"
                         aria-label="Toggle menu"
                     >
-                        <span className={`block w-6 h-0.5 bg-orange-50 transition-transform ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-                        <span className={`block w-6 h-0.5 bg-orange-50 transition-opacity ${isOpen ? "opacity-0" : ""}`} />
-                        <span className={`block w-6 h-0.5 bg-orange-50 transition-transform ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                        <span className={`block w-6 h-0.5 bg-gold transition-transform ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
+                        <span className={`block w-6 h-0.5 bg-gold transition-opacity ${isOpen ? "opacity-0" : ""}`} />
+                        <span className={`block w-6 h-0.5 bg-gold transition-transform ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
                     </button>
 
-                    <div className="hidden md:flex flex-row gap-8 px-6 py-4">
-                        {LINKS.map((link) => (
-                            <li key={link.href}>
+                    <div className="hidden md:flex flex-row items-center gap-5 px-4 py-4">
+                        {LINKS.map((link, i) => (
+                            <li key={link.href} className="flex items-center gap-5">
+                                {i > 0 && <span aria-hidden className="h-1.5 w-1.5 rotate-45 bg-gold" />}
                                 <NavLink href={link.href} label={link.label} isActive={link.pages.includes(pathname)} />
                             </li>
                         ))}
@@ -69,7 +70,7 @@ export default function Navigation(){
 
                 {/*Craete the mobile dropdown.*/}
                 <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60" : "max-h-0"}`}>
-                    <div className="flex flex-col items-center gap-3 px-4 pb-4">
+                    <div className="flex flex-col items-center gap-3 border-t border-gold/30 px-4 py-4">
                         {LINKS.map((link) => (
                             <li key={link.href}>
                                 <NavLink href={link.href} label={link.label} isActive={link.pages.includes(pathname)} onClick={() => setIsOpen(false)} />
