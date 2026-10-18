@@ -6,6 +6,7 @@ const LINKS = [
     { href: "/learn", label: "Learn Aromanian" },
     { href: "/traditions", label: "Traditions" },
     { href: "/history", label: "History" },
+    { href: "/personalities", label: "Personalities" },
     { href: "/about", label: "About developer" },
 ]
 
