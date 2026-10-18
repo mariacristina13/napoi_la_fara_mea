@@ -1,10 +1,34 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
+
+// `pages` lists every page that belongs to a link, so it stays highlighted on its sub-pages too.
+const LINKS = [
+    { href: "/learn", label: "Learn Aromanian", pages: ["/learn", "/alphabet", "/dictionaries", "/quizzes"] },
+    { href: "/traditions", label: "Traditions", pages: ["/traditions", "/birth", "/wedding", "/death", "/food"] },
+    { href: "/history", label: "History", pages: ["/history"] },
+]
+
+// Text turns gold and a gold underline grows from the centre on hover; the current page keeps its underline.
+function NavLink({ href, label, isActive, onClick }) {
+    return (
+        <Link
+            href={href}
+            onClick={onClick}
+            aria-current={isActive ? "page" : undefined}
+            className={`group relative block py-2 text-sm transition-colors hover:text-gold ${isActive ? "text-gold" : "text-orange-50"}`}
+        >
+            {label}
+            <span aria-hidden className={`absolute bottom-0 left-0 h-0.5 w-full origin-center rounded-full bg-gold transition-transform duration-300 group-hover:scale-x-100 ${isActive ? "scale-x-100" : "scale-x-0"}`} />
+        </Link>
+    )
+}
 
 export default function Navigation(){
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
     
     return(
         <nav className="bg-rose-950">
@@ -34,51 +58,23 @@ export default function Navigation(){
                         <span className={`block w-6 h-0.5 bg-orange-50 transition-transform ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
                     </button>
 
-                    <div className="hidden md:flex flex-row gap-5 p-4">
-                        <li className="flex flex-wrap gap-4">
-                            <Link href="/learn" className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl">
-                                <p className="text-sm">Learn Aromanian</p>
-                            </Link>
-                        </li>
-
-                        <li className="flex flex-wrap gap-4">
-                            <Link href="/traditions" className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl">
-                            <p className="text-sm">Traditions</p>
-                            </Link>
-                        </li>
-
-                        {/*<li>
-                            <Link href="/events" className="btn hover:bg-yellow-600 p-4 border border-rose-950 rounded-xl">Events</Link>
-                        </li>*/}
-
-                        <li className="flex flex-wrap gap-4">
-                            <Link href="/history" className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl">
-                                <p className="text-sm">History</p>
-                            </Link>
-                        </li>
+                    <div className="hidden md:flex flex-row gap-8 px-6 py-4">
+                        {LINKS.map((link) => (
+                            <li key={link.href}>
+                                <NavLink href={link.href} label={link.label} isActive={link.pages.includes(pathname)} />
+                            </li>
+                        ))}
                     </div>
                 </div>
 
                 {/*Craete the mobile dropdown.*/}
                 <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60" : "max-h-0"}`}>
                     <div className="flex flex-col items-center gap-3 px-4 pb-4">
-                        <li>
-                            <Link href="/learn" onClick={() => setIsOpen(false)} className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl block">
-                                <p className="text-xs">Learn Aromanian</p>
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link href="/traditions" onClick={() => setIsOpen(false)} className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl block">
-                                <p className="text-xs">Traditions</p>
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link href="/history" onClick={() => setIsOpen(false)} className="btn hover:border-dashed hover:border-2 hover:border-yellow-600 p-3 rounded-xl block">
-                                <p className="text-xs">History</p>
-                            </Link>
-                        </li>
+                        {LINKS.map((link) => (
+                            <li key={link.href}>
+                                <NavLink href={link.href} label={link.label} isActive={link.pages.includes(pathname)} onClick={() => setIsOpen(false)} />
+                            </li>
+                        ))}
                     </div>
                 </div>
             </ul>
