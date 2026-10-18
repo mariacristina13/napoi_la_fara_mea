@@ -46,6 +46,7 @@ export default function Learn() {
                     alt=""
                     fill
                     priority
+                    unoptimized
                     className="object-cover opacity-25 blur-xs"
                     sizes="100vw"
                 />

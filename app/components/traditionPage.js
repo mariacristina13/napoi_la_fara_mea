@@ -101,6 +101,7 @@ export function TraditionHeader({
                     alt=""
                     fill
                     priority
+                    unoptimized
                     className={imageStyle}
                     sizes="100vw"
                 />

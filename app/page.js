@@ -238,7 +238,8 @@ export default function Home() {
                                                     width={item.image.width}
                                                     height={item.image.height}
                                                     className={`w-full ${IMAGE_FIT[item.image.fit ?? "cover"]} ${item.image.zoom ?? ""} ${item.href ? "sepia-25" : "grayscale"}`}
-                                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                                    // Load straight from Wikimedia, which rate-limits the Next.js image optimiser.
+                                                    unoptimized
                                                 />
                                             </div>
                                         </div>

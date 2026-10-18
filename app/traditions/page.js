@@ -75,6 +75,7 @@ export default function Traditions() {
                     alt=""
                     fill
                     priority
+                    unoptimized
                     className={TRADITIONS_HEADER_IMAGE_STYLE}
                     sizes="100vw"
                 />
