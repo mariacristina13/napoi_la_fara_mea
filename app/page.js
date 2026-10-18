@@ -164,6 +164,20 @@ const DISCOVER = [
             link: "https://commons.wikimedia.org/wiki/File:Vlasi_vo_Egejska_Makedonija.jpg",
         },
     },
+    {
+        href: "/personalities",
+        label: "Notable Aromanians",
+        title: "Personalities",
+        description: "Painters and patriarchs, doctors and footballers: people of Aromanian descent who left their mark on the Balkans and beyond.",
+        image: {
+            src: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Milton_Manaki_filming.png",
+            width: 350,
+            height: 254,
+            alt: "Milton Manaki standing behind his film camera on a tripod in a grassy valley.",
+            caption: "Milton Manaki, pioneer of Balkan film, filming near Bitola with his Bioscope camera",
+            link: "https://commons.wikimedia.org/wiki/File:Milton_Manaki_filming.png",
+        },
+    },
 ]
 
 export default function Home() {

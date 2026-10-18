@@ -84,23 +84,31 @@ function Block({ block, source }) {
 }
 
 // The dark banner at the top of every tradition page, with the embroidery band under it.
-export function TraditionHeader({ title, intro, label = "Customs and beliefs" }) {
+// `back` is the link at the top left; `image` and `imageStyle` set the faded background picture.
+export function TraditionHeader({
+    title,
+    intro,
+    label = "Customs and beliefs",
+    back = { href: "/traditions", label: "All traditions" },
+    image = TRADITIONS_HEADER_IMAGE,
+    imageStyle = TRADITIONS_HEADER_IMAGE_STYLE,
+}) {
     return (
         <>
             <header className="relative w-full overflow-hidden bg-rose-950">
                 <Image
-                    src={TRADITIONS_HEADER_IMAGE}
+                    src={image}
                     alt=""
                     fill
                     priority
-                    className={TRADITIONS_HEADER_IMAGE_STYLE}
+                    className={imageStyle}
                     sizes="100vw"
                 />
                 <div aria-hidden className="absolute inset-0 bg-linear-to-b from-rose-950/70 via-rose-950/40 to-rose-950" />
                 <div className="relative mx-auto max-w-5xl px-5 pt-8 pb-16 text-center">
-                    <Link href="/traditions" className="group flex w-fit items-center gap-1 text-sm text-gold hover:text-orange-50 transition-colors">
+                    <Link href={back.href} className="group flex w-fit items-center gap-1 text-sm text-gold hover:text-orange-50 transition-colors">
                         <span aria-hidden className="mx-1 h-2 w-2 -rotate-45 border-t-2 border-l-2 border-current transition-transform group-hover:-translate-x-1" />
-                        All traditions
+                        {back.label}
                     </Link>
                     <p className="mt-10 font-serif text-lg italic text-gold md:text-xl">{label}</p>
                     {/* w-fit makes the ornament exactly as wide as the title */}
