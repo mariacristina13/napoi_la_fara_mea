@@ -136,6 +136,7 @@ const DISCOVER = [
         },
     },
     {
+        href: "/history",
         label: "The past",
         title: "History",
         description: "The story of the Aromanian people across the Balkans.",
