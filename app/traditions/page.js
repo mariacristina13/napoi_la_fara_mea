@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { TRADITIONS_HEADER_IMAGE, TRADITIONS_HEADER_IMAGE_STYLE } from "../components/headerImages"
+import { TRADITIONS_HEADER_IMAGE, TRADITIONS_HEADER_IMAGE_STYLE, TRADITIONS_HEADER_CREDIT, HeaderImageCredit } from "../components/headerImages"
 import { Ornament, EmbroideryBand } from "../components/ornament"
 
 const ROMAN_NUMERALS = ["I", "II", "III", "IV", "V"]
@@ -95,6 +95,7 @@ export default function Traditions() {
                         The customs that marked every stage of Aromanian life, from birth and marriage to death.
                     </p>
                 </div>
+                <HeaderImageCredit credit={TRADITIONS_HEADER_CREDIT} />
             </header>
 
             <EmbroideryBand />
@@ -107,6 +108,11 @@ export default function Traditions() {
                         </li>
                     ))}
                 </ol>
+                <p className="mx-auto mt-8 max-w-5xl px-5 text-sm text-yellow-700">
+                    <cite className="not-italic">
+                        Sources: Irina Nicolau, <i>Aromânii. Credințe și obiceiuri</i>, 2001; for food, also Mara Răducanu and Anna Borca, Jurnalul, 2006
+                    </cite>
+                </p>
             </main>
         </div>
     )

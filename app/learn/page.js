@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { LEARN_HEADER_IMAGE } from "../components/headerImages"
+import { LEARN_HEADER_IMAGE, LEARN_HEADER_CREDIT, HeaderImageCredit } from "../components/headerImages"
 import { Ornament, EmbroideryBand } from "../components/ornament"
 
 const RESOURCES = [
@@ -66,6 +66,7 @@ export default function Learn() {
                         A collection of resources, dictionaries, quizzes and practice sheets.
                     </p>
                 </div>
+                <HeaderImageCredit credit={LEARN_HEADER_CREDIT} />
             </header>
 
             <EmbroideryBand />
@@ -101,6 +102,7 @@ export default function Learn() {
                             </div>
                         ))}
                     </dl>
+                    <cite className="mt-3 block text-sm not-italic text-yellow-700">Sources: {WIKIPEDIA.publisher}, {WIKIPEDIA.title}; UNESCO, 2010</cite>
                 </section>
 
                 <section aria-labelledby="history" className="mx-auto mt-16 grid max-w-5xl gap-10 px-5 md:grid-cols-[1fr_2fr]">
@@ -162,6 +164,7 @@ export default function Learn() {
                             UNESCO&apos;s 2010 <i>Atlas of the World&apos;s Languages in Danger</i> classifies it as definitely
                             endangered, a real risk of the language disappearing within a generation or two.
                         </p>
+                        <cite className="mt-5 block text-sm not-italic text-rose-950">Sources: {WIKIPEDIA.publisher}, {WIKIPEDIA.title}; UNESCO, 2010</cite>
                     </div>
                 </section>
 

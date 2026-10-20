@@ -4,7 +4,7 @@ import BackToTop from "../components/backToTop"
 import { SectionHeading } from "../components/learnPage"
 import { TraditionHeader } from "../components/traditionPage"
 import { Ornament } from "../components/ornament"
-import { PERSONALITIES_HEADER_IMAGE } from "../components/headerImages"
+import { PERSONALITIES_HEADER_IMAGE, PERSONALITIES_HEADER_CREDIT } from "../components/headerImages"
 
 const SOURCES = {
     globalVoices: {
@@ -366,6 +366,7 @@ export default function Personalities() {
                 title="Aromanian Personalities"
                 intro="Painters and patriarchs, doctors and footballers: people of Aromanian descent who left their mark on the Balkans and beyond."
                 image={PERSONALITIES_HEADER_IMAGE}
+                imageCredit={PERSONALITIES_HEADER_CREDIT}
                 imageStyle="object-cover opacity-40 sepia-50 blur-xs"
             />
 
@@ -407,6 +408,10 @@ export default function Personalities() {
                                 <Portrait key={name} portrait={byName(name)} />
                             ))}
                         </div>
+
+                        <cite className="mt-8 block text-sm not-italic text-orange-50/70">
+                            Names, dates and roles: Global Voices, 2025; Wikipedia, &ldquo;List of Aromanians&rdquo;
+                        </cite>
 
                         <details className="mt-6 text-orange-50/80">
                             <summary className="w-fit cursor-pointer font-serif text-lg italic text-gold hover:text-orange-50 transition-colors">

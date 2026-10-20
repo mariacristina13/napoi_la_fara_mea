@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Ornament, EmbroideryBand } from "./ornament"
-import { LEARN_HEADER_IMAGE } from "./headerImages"
+import { LEARN_HEADER_IMAGE, LEARN_HEADER_CREDIT, HeaderImageCredit } from "./headerImages"
 
 // Shared pieces for the pages under "Learn Aromanian" (alphabet, dictionaries, quizzes).
 
@@ -34,6 +34,7 @@ export function LearnHeader({ label, labelLang, title, children }) {
                     </div>
                     <p className="mx-auto mt-6 max-w-2xl font-serif text-xl italic text-orange-50 md:text-2xl">{children}</p>
                 </div>
+                <HeaderImageCredit credit={LEARN_HEADER_CREDIT} />
             </header>
 
             <EmbroideryBand />

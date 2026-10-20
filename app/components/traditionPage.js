@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import BackToTop from "./backToTop"
 import { Ornament, EmbroideryBand } from "./ornament"
-import { TRADITIONS_HEADER_IMAGE, TRADITIONS_HEADER_IMAGE_STYLE } from "./headerImages"
+import { TRADITIONS_HEADER_IMAGE, TRADITIONS_HEADER_IMAGE_STYLE, TRADITIONS_HEADER_CREDIT, HeaderImageCredit } from "./headerImages"
 
 const ROMAN_NUMERALS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
 
@@ -92,6 +92,7 @@ export function TraditionHeader({
     back = { href: "/traditions", label: "All traditions" },
     image = TRADITIONS_HEADER_IMAGE,
     imageStyle = TRADITIONS_HEADER_IMAGE_STYLE,
+    imageCredit = TRADITIONS_HEADER_CREDIT,
 }) {
     return (
         <>
@@ -119,6 +120,7 @@ export function TraditionHeader({
                     </div>
                     {intro && <p className="mx-auto mt-6 max-w-2xl font-serif text-xl italic text-orange-50 md:text-2xl">{intro}</p>}
                 </div>
+                <HeaderImageCredit credit={imageCredit} />
             </header>
 
             <EmbroideryBand />

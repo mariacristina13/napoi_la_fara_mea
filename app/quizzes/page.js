@@ -40,6 +40,7 @@ export default function Quizzes() {
                         <p className="mt-5 text-base text-yellow-950 md:text-lg">
                             It offers vocabulary, grammar, and self-study materials for learners at different levels.
                         </p>
+                        <cite className="mt-3 block text-sm not-italic text-yellow-700">Source: {SOURCES[0].label}</cite>
 
                         <a
                             href={PLATFORM_URL}
@@ -67,6 +68,7 @@ export default function Quizzes() {
                                 </li>
                             ))}
                         </ol>
+                        <cite className="mt-6 block text-sm not-italic text-orange-50/70">Source: {SOURCES[0].label}</cite>
                     </div>
                 </section>
 

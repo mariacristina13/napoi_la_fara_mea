@@ -99,14 +99,14 @@ export default function Dictionaries() {
 
                             <p className="mt-5 text-base text-yellow-950 md:text-lg">
                                 Translating other texts into Aromanian has a much longer history than dictionary-building, and it
-                                began with religion rather than reference works.
+                                began with religion rather than reference works. <Cite>Wikipedia, Aromanian language</Cite>
                             </p>
                             <p className="mt-5 text-base text-yellow-950 md:text-lg">
                                 One of the earliest surviving Aromanian texts, the Aromanian Missal, is essentially a translation
                                 project, containing sermons and other religious texts rendered into Aromanian for the communities
                                 of Moscopole, once a prosperous Aromanian city. <Cite>Wikipedia, Aromanian Missal</Cite> That
                                 tradition of religious translation has continued into the present, with the Gospel of Luke among
-                                the biblical texts since translated into the language.
+                                the biblical texts since translated into the language. <Cite>Wikipedia, Aromanian language</Cite>
                             </p>
                             <p className="mt-5 text-base text-yellow-950 md:text-lg">
                                 More recently, translation has expanded into literature and international documents, including a

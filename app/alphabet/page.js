@@ -52,26 +52,31 @@ const HISTORY = [
     {
         period: "Before the 19th century",
         title: "Greek and Cyrillic scripts",
-        text: "The earliest known Aromanian writing dates back to manuscripts from the 9th century, and for much of its history the language was written using Greek and Cyrillic scripts before shifting toward Latin-based systems.",
+        source: "Wikipedia, Aromanian language; Wikipedia, Aromanian alphabet",
+        text: "The oldest surviving Aromanian text is an inscription from 1731 by Nektarios Terpos at Ardenica Monastery in Albania. Other early records include a small glossary in a Chronicle of Ioannina manuscript (16th or 17th century), the Simota Vase and texts in St Athanasius Church in Moscopole (early 18th century), and the Kleino inscription in Greece (around 1780). A possibly older inscription from 1426, at Linotopi in Greece, was destroyed during restoration. For much of its history, Aromanian was written in Greek and Cyrillic letters before moving to the Latin alphabet.",
     },
     {
         period: "Early 19th century",
         title: "The first Latin alphabet",
+        source: "Wikipedia, Mihail G. Boiagi",
         text: "The first true Aromanian writing system using the Latin alphabet was introduced by the grammarian Mihail G. Boiagi, who relied on digraphs like \"sh\" and \"nj\" instead of diacritical marks to represent sounds the Latin alphabet couldn't capture on its own.",
     },
     {
         period: "19th and 20th centuries",
         title: "No standard spelling",
+        source: "Farsharotu, On the Standardization of the Aromanian System of Writing",
         text: "Because a standard spelling system didn't exist for most of Aromanian's written history, different writers represented the same distinctive sounds, like the \"dh\", \"gh\" and \"th\" borrowed from Greek, in inconsistent ways for decades.",
     },
     {
         period: "1997 – 1999",
         title: "The Bitola standard",
+        source: "Wikipedia, Aromanian alphabet; Farsharotu",
         text: "The alphabet used today was proposed in 1997 at the Symposium for Standardisation of the Aromanian Writing System in Bitola, North Macedonia, revised in 1999, and has since been adopted by most Aromanian writers across North Macedonia, Serbia, Albania, Bulgaria, and Romania.",
     },
 ]
 
 const SOURCES = [
+    { label: "Wikipedia: Aromanian language", url: "https://en.wikipedia.org/wiki/Aromanian_language" },
     { label: "Wikipedia: Aromanian alphabet", url: "https://en.wikipedia.org/wiki/Aromanian_alphabet" },
     { label: "Wikipedia: Mihail G. Boiagi", url: "https://en.wikipedia.org/wiki/Mihail_G._Boiagi" },
     { label: "Aromanian Cultural Society Farsharotu: On the Standardization of the Aromanian System of Writing", url: "https://farsharotu.org/on-the-standardization-of-the-aromanian-system-of-writing/" },
@@ -118,6 +123,7 @@ export default function Alphabet() {
                             <LetterTile key={letter.letter} {...letter} />
                         ))}
                     </ol>
+                    <cite className="mt-3 block text-sm not-italic text-yellow-700">Source: Wikipedia, Aromanian alphabet</cite>
                 </section>
 
                 <section aria-labelledby="history" className="border-y border-yellow-600/30 bg-orange-100/50">
@@ -133,6 +139,7 @@ export default function Alphabet() {
                                         <span className="italic">{ROMAN_NUMERALS[i]}.</span> {step.title}
                                     </h3>
                                     <p className="mt-3 text-base text-yellow-950">{step.text}</p>
+                                    <cite className="mt-2 block text-sm not-italic text-yellow-700">{step.source}</cite>
                                 </li>
                             ))}
                         </ol>

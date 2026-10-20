@@ -32,6 +32,7 @@ const SECTIONS = [
                 text: <>When the two fathers agreed, they turned to face the east and said <Term>Al Dumnidză si s-facâ!</Term> (&ldquo;Let it be God&apos;s will!&rdquo;). A boy who was away in the mountains with the sheep could be betrothed in his absence, and the young couple were often told about the match only shortly before the ceremony.</>,
             },
             {
+                pages: "78",
                 text: <>A full Aromanian betrothal consisted of two separate ceremonies.</>,
             },
             { subheading: "The Small Sign (Semnul Mic / Protlu Semnu)" },
@@ -232,6 +233,7 @@ const SECTIONS = [
         title: "The Wedding Flag (Hlambura)",
         paragraphs: [
             {
+                pages: "88",
                 text: <>The wedding flag is one of the central ritual objects of an Aromanian wedding, and its making, delivery, and eventual dismantling each carried their own significance.</>,
             },
             { subheading: "The Construction" },

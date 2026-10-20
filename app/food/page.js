@@ -368,6 +368,7 @@ export default function Food() {
                     <p className="mt-6 max-w-3xl text-base text-yellow-950 md:text-lg">
                         For the Aromanians, food was rarely just a meal. Breads, cakes and dishes marked the turning of the year and
                         every stage of life.
+                        <cite className="block text-sm not-italic text-yellow-700">{NICOLAU_2001.author}, {NICOLAU_2001.year}</cite>
                     </p>
 
                     <div className="mt-10 grid gap-12 md:grid-cols-2">

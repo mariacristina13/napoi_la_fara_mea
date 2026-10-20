@@ -4,9 +4,8 @@ import { Map, MapControls, MapMarker, MarkerContent, MarkerPopup } from "@/app/c
 import { TraditionHeader } from "../components/traditionPage"
 import { SectionHeading } from "../components/learnPage"
 import { Ornament } from "../components/ornament"
+import { HISTORY_HEADER_IMAGE, HISTORY_HEADER_CREDIT } from "../components/headerImages"
 
-// Moscopole (Voskopojë) in 1742, after an engraving. Public domain, via Wikimedia Commons.
-const HISTORY_HEADER_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/7/78/Voskopoja_ne_vitin_1742.jpg"
 
 // Marker colour for each country (also used in the legend under the map).
 const COUNTRIES = [
@@ -328,15 +327,17 @@ const SOURCES = [
     { key: "marcu", short: "George Marcu, 1977", label: "George Marcu, Folclor muzical aromân, Editura Muzicală, Bucharest, 1977" },
     { key: "djuvara", short: "Djuvara (ed.), 1996", label: "Matilda Caragiu-Marioteanu, “Decalogul aromânilor”, in Neagu Djuvara (ed.), Aromânii: istorie, limbă, destin, Editura Fundației Culturale Române, Bucharest, 1996, p. 170" },
     { key: "aspecte", short: "“Aspecte istorice din viața aromânilor”", label: "“Aspecte istorice din viața aromânilor” (student paper, author unknown), quoting an email from Dumitru Piceava (2006) and a Senate speech by Puiu Hasotti (25 April 2005)", url: "http://www.scritube.com/istorie/ASPECTE-ISTORICE-DIN-VIATA-ARO2332432422.php" },
-    { key: "asen", short: "Wikipedia", label: "Wikipedia, “Uprising of Asen and Peter”", url: "https://en.wikipedia.org/wiki/Uprising_of_Asen_and_Peter" },
-    { label: "Aromanian Cultural Society Farsharotu, “Touring the Vlach villages of Greece”", url: "https://farsharotu.org/touring-the-vlach-villages-of-greece/" },
-    { label: "Bluebird Maps, “Vlach or Aromanian settlements in south-east Europe”, 2017", url: "https://bluebirdmaps.com/2017/07/09/vlach-or-aromanian-settlements-in-south-east-europe/" },
-    { label: "Wikipedia, “List of Aromanian settlements”", url: "https://en.wikipedia.org/wiki/List_of_Aromanian_settlements" },
-    { label: "Wikipedia, “Aromanians”", url: "https://en.wikipedia.org/wiki/Aromanians" },
-    { label: "Wikipedia, “Aromanians in Albania”", url: "https://en.wikipedia.org/wiki/Aromanians_in_Albania" },
-    { key: "wiki-macedonia", short: "Wikipedia", label: "Wikipedia, “Aromanians in North Macedonia”", url: "https://en.wikipedia.org/wiki/Aromanians_in_North_Macedonia" },
-    { label: "Wikipedia, “Macedo-Romanian Cultural Society”", url: "https://en.wikipedia.org/wiki/Macedo-Romanian_Cultural_Society" },
-    { label: "Columbia University, “Aromanians”", url: "http://www.columbia.edu/cu/romanian/articles/aromani.html" },
+    { key: "asen", short: "Wikipedia, Uprising of Asen and Peter", label: "Wikipedia, “Uprising of Asen and Peter”", url: "https://en.wikipedia.org/wiki/Uprising_of_Asen_and_Peter" },
+    { key: "farsharotu", short: "Farsharotu", label: "Aromanian Cultural Society Farsharotu, “Touring the Vlach villages of Greece”", url: "https://farsharotu.org/touring-the-vlach-villages-of-greece/" },
+    { key: "bluebird", short: "Bluebird Maps", label: "Bluebird Maps, “Vlach or Aromanian settlements in south-east Europe”, 2017", url: "https://bluebirdmaps.com/2017/07/09/vlach-or-aromanian-settlements-in-south-east-europe/" },
+    { key: "wiki-settlements", short: "Wikipedia, List of Aromanian settlements", label: "Wikipedia, “List of Aromanian settlements”", url: "https://en.wikipedia.org/wiki/List_of_Aromanian_settlements" },
+    { key: "wiki-aromanians", short: "Wikipedia, Aromanians", label: "Wikipedia, “Aromanians”", url: "https://en.wikipedia.org/wiki/Aromanians" },
+    { key: "wiki-albania", short: "Wikipedia, Aromanians in Albania", label: "Wikipedia, “Aromanians in Albania”", url: "https://en.wikipedia.org/wiki/Aromanians_in_Albania" },
+    { key: "wiki-macedonia", short: "Wikipedia, Aromanians in North Macedonia", label: "Wikipedia, “Aromanians in North Macedonia”", url: "https://en.wikipedia.org/wiki/Aromanians_in_North_Macedonia" },
+    { key: "wiki-society", short: "Wikipedia, Macedo-Romanian Cultural Society", label: "Wikipedia, “Macedo-Romanian Cultural Society”", url: "https://en.wikipedia.org/wiki/Macedo-Romanian_Cultural_Society" },
+    { key: "columbia", short: "Columbia University", label: "Columbia University, “Aromanians”", url: "http://www.columbia.edu/cu/romanian/articles/aromani.html" },
+    { key: "wiki-people", short: "Wikipedia, List of Aromanians", label: "Wikipedia, “List of Aromanians”, and the articles on the people in the “Did you know?” notes", url: "https://en.wikipedia.org/wiki/List_of_Aromanians" },
+    { key: "eminescu", short: "Eminescu", label: "Mihai Eminescu, Românii Peninsulei Balcanice (newspaper articles, 1876–1882), quoting F. Kanitz" },
 ]
 
 function PlacePopup({ place }) {
@@ -351,12 +352,19 @@ function PlacePopup({ place }) {
     )
 }
 
+// Links to one or more entries in the Sources list. `sourceKey` is a key of SOURCES, or a list of keys.
 function SourceTag({ sourceKey }) {
-    const source = SOURCES.find((s) => s.key === sourceKey)
+    const sources = [sourceKey].flat().map((key) => SOURCES.find((s) => s.key === key))
     return (
-        <a href={`#source-${source.key}`} className="mt-2 inline-block font-serif text-sm italic text-yellow-700 hover:text-rose-950 transition-colors">
-            Source: {source.short}
-        </a>
+        <p className="mt-2 font-serif text-sm italic text-yellow-700">
+            {sources.length > 1 ? "Sources" : "Source"}:{" "}
+            {sources.map((source, i) => (
+                <span key={source.key}>
+                    {i > 0 && "; "}
+                    <a href={`#source-${source.key}`} className="hover:text-rose-950 transition-colors">{source.short}</a>
+                </span>
+            ))}
+        </p>
     )
 }
 
@@ -396,6 +404,7 @@ export default function History() {
                 title="History"
                 intro="The story of the Aromanian people across the Balkans."
                 image={HISTORY_HEADER_IMAGE}
+                imageCredit={HISTORY_HEADER_CREDIT}
                 imageStyle="object-cover opacity-30 sepia-50 blur-xs"
             />
 
@@ -450,6 +459,7 @@ export default function History() {
                                     </div>
                                 ))}
                             </dl>
+                            <SourceTag sourceKey={["caranica", "diaconescu", "eminescu"]} />
                         </aside>
                     </div>
 
@@ -520,6 +530,7 @@ export default function History() {
                         the Pindus and Gramos ranges, historic merchant towns, and the cities where many families moved in the
                         20th century.
                     </p>
+                    <SourceTag sourceKey={["wiki-settlements", "farsharotu", "bluebird"]} />
 
                     <div className="mt-10 border-8 border-double border-yellow-600 bg-yellow-900 p-1.5 shadow-xl ring-1 ring-yellow-950">
                         <div className="h-120 overflow-hidden bg-orange-50">
@@ -590,6 +601,7 @@ export default function History() {
                             )
                         })}
                     </div>
+                    <SourceTag sourceKey={["farsharotu", "bluebird", "wiki-settlements", "wiki-aromanians", "wiki-albania", "wiki-macedonia", "wiki-society", "columbia", "wiki-people"]} />
                 </section>
 
                 <section aria-labelledby="sources" className="mx-auto max-w-5xl border-t border-yellow-600/30 px-5 py-16">
