@@ -4,6 +4,7 @@ import { Map, MapControls, MapMarker, MarkerContent, MarkerPopup } from "@/app/c
 import { TraditionHeader } from "../components/traditionPage"
 import { SectionHeading } from "../components/learnPage"
 import { Ornament } from "../components/ornament"
+import BackToTop from "../components/backToTop"
 import { HISTORY_HEADER_IMAGE, HISTORY_HEADER_CREDIT } from "../components/headerImages"
 
 
@@ -516,6 +517,55 @@ export default function History() {
                             </div>
                         </div>
                     </div>
+
+                    <div className="mt-16">
+                        <h3 className="font-serif text-2xl font-semibold text-rose-950 md:text-3xl">Aromanians or Romanians?</h3>
+                        <p className="mt-4 max-w-3xl text-base text-yellow-950 md:text-lg">
+                            Aromanians in Romania themselves disagree on who they are. In 2005, community representatives asked for
+                            the Aromanians to be registered as a national minority, which started a public debate. Two voices from it:
+                        </p>
+
+                        <div className="mt-8 grid gap-6 md:grid-cols-2">
+                            {VIEWS.map((view) => (
+                                <figure key={view.person} className="flex flex-col rounded-sm border border-rose-950/20 bg-white p-6">
+                                    <blockquote className="font-serif text-3xl italic leading-tight text-rose-950">
+                                        <span aria-hidden className="text-gold">&ldquo;</span>{view.quote}<span aria-hidden className="text-gold">&rdquo;</span>
+                                    </blockquote>
+                                    <p className="mt-4 flex-1 text-base text-yellow-950">{view.text}</p>
+                                    <figcaption className="mt-5 border-t border-yellow-600/40 pt-4">
+                                        <span className="block font-serif text-lg font-semibold text-rose-950">{view.person}</span>
+                                        <span className="block text-sm text-yellow-700">{view.role}</span>
+                                        <SourceTag sourceKey={view.source} />
+                                    </figcaption>
+                                </figure>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="mt-16 border-8 border-double border-yellow-600 bg-rose-950 px-6 py-10 sm:px-10">
+                        <p className="text-center font-serif text-lg italic text-gold">Matilda Caragiu-Marioteanu</p>
+                        <div className="mx-auto w-fit text-center">
+                            <h3 className="font-serif text-3xl font-semibold text-yellow-600 md:text-4xl">The Aromanian Decalogue</h3>
+                            <Ornament light stretch className="mt-3" />
+                        </div>
+                        <p className="mx-auto mt-6 max-w-2xl text-center text-base text-orange-50 md:text-lg">
+                            Twelve &ldquo;historical and present-day truths&rdquo; about the Aromanians and their language, written
+                            by the leading Aromanian linguist, herself of Aromanian origin.
+                        </p>
+                        <ol className="mt-10 grid gap-x-10 gap-y-5 md:grid-cols-2">
+                            {DECALOGUE.map((point, i) => (
+                                <li key={i} className="flex gap-4">
+                                    <span className="w-8 shrink-0 text-right font-serif text-2xl italic text-gold">{i + 1}</span>
+                                    <span className="text-base text-orange-50">{point}</span>
+                                </li>
+                            ))}
+                        </ol>
+                        <div className="mt-8 text-center">
+                            <a href="#source-djuvara" className="font-serif text-sm italic text-gold hover:text-orange-50 transition-colors">
+                                Source: Djuvara (ed.), 1996
+                            </a>
+                        </div>
+                    </div>
                 </section>
 
                 <section aria-labelledby="timeline" className="mx-auto max-w-5xl px-5 pt-20">
@@ -619,6 +669,8 @@ export default function History() {
                     </ul>
                 </section>
             </main>
+
+            <BackToTop />
         </div>
     )
 }
