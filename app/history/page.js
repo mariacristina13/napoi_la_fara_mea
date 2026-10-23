@@ -19,44 +19,52 @@ const COUNTRIES = [
 const colourOf = (country) => COUNTRIES.find((c) => c.name === country).colour
 
 // Aromanian settlements. Coordinates are from Wikipedia. `aromanian` is the Aromanian name, where one is given;
-// `didYouKnow` and `link` connect the place to other pages on this site.
+// `didYouKnow` and `link` connect the place to other pages on this site; `sources` are keys of SOURCES.
 const PLACES = [
     // Greece
     {
         name: "Metsovo", aromanian: "Aminciu", country: "Greece", lng: 21.1839, lat: 39.7703,
+        sources: ["wiki-settlements", "farsharotu", "bluebird", "wiki-people"],
         text: "The largest and most vibrant year-round Aromanian town, in the Pindus mountains.",
         didYouKnow: "The great benefactors George Averoff and Michael Tositsas were both born here.",
         link: { href: "/personalities", label: "See George Averoff in the Portrait Gallery" },
     },
     {
         name: "Samarina", country: "Greece", lng: 21.0667, lat: 40.1,
+        sources: ["wiki-settlements", "farsharotu", "bluebird", "wiki-samarina"],
         text: "One of the highest villages in Greece, famous for its major annual Aromanian festival.",
         didYouKnow: "It is a classic summer village of the Pindus shepherds, described by Wace and Thompson in The Nomads of the Balkans (1914).",
     },
     {
         name: "Nymfaio", aromanian: "Nevesca", country: "Greece", lng: 21.5, lat: 40.65,
+        sources: ["wiki-settlements", "farsharotu", "bluebird"],
         text: "A historically prosperous merchant town established by Aromanian traders.",
     },
     {
         name: "Avdella", country: "Greece", lng: 21.1333, lat: 40.0167,
+        sources: ["wiki-settlements", "farsharotu", "bluebird", "wiki-people"],
         text: "One of the major traditional highland Vlach settlements in the Pindus range.",
         didYouKnow: "The Manaki brothers, pioneers of Balkan photography and film, were born here.",
         link: { href: "/personalities", label: "See the Manaki brothers in the Portrait Gallery" },
     },
     {
         name: "Perivoli", country: "Greece", lng: 21.1167, lat: 39.9833,
+        sources: ["wiki-settlements", "farsharotu", "bluebird"],
         text: "One of the major traditional highland Vlach settlements in the Pindus range.",
     },
     {
         name: "Larissa", country: "Greece", lng: 22.4167, lat: 39.6417,
+        sources: ["wiki-settlements", "farsharotu", "bluebird"],
         text: "A major urban hub in Thessaly, where significant numbers of largely assimilated Aromanians live.",
     },
     {
         name: "Volos", country: "Greece", lng: 22.9333, lat: 39.3667,
+        sources: ["wiki-settlements", "farsharotu", "bluebird"],
         text: "A major urban hub in Thessaly, where significant numbers of largely assimilated Aromanians live.",
     },
     {
         name: "Veria", country: "Greece", lng: 22.2, lat: 40.5167,
+        sources: ["wiki-settlements", "wiki-people"],
         text: "A town in Greek Macedonia with an Aromanian community.",
         didYouKnow: "The engineer and aircraft designer Elie Carafoli, a pioneer of aerodynamics, was born here.",
         link: { href: "/personalities", label: "See Elie Carafoli in the Portrait Gallery" },
@@ -65,64 +73,83 @@ const PLACES = [
     // Albania
     {
         name: "Voskopojë", aromanian: "Moscopole", country: "Albania", lng: 20.5903, lat: 40.6333,
+        sources: ["wiki-settlements", "wiki-aromanians", "wiki-albania", "columbia", "diaconescu", "wiki-people"],
         text: "The most famous historic Aromanian cultural, economic and printing centre, destroyed in the 18th century.",
         didYouKnow: "Its printing press and New Academy made it a centre of learning; the scholar Theodore Kavalliotis taught there.",
     },
     {
         name: "Fier", country: "Albania", lng: 19.5572, lat: 40.725,
+        sources: ["wiki-settlements", "wiki-aromanians", "wiki-albania", "columbia"],
         text: "Has a distinct Aromanian quarter, historically known as Ferãcã.",
     },
     {
         name: "Korçë", aromanian: "Curceau", country: "Albania", lng: 20.7667, lat: 40.6167,
+        sources: ["wiki-settlements", "wiki-aromanians", "wiki-albania", "columbia"],
         text: "A significant south-eastern centre with a large historic and modern Aromanian population.",
     },
     {
         name: "Grabovë e Sipërme", aromanian: "Grabova", country: "Albania", lng: 20.4086, lat: 40.7953,
+        sources: ["wiki-settlements", "wiki-aromanians", "wiki-albania", "columbia", "wiki-people"],
         text: "An isolated, historic highland settlement in the Gramos mountains.",
         didYouKnow: "The family of Patriarch Cyril of Bulgaria came from Grabova and Moscopole.",
         link: { href: "/personalities", label: "See Patriarch Cyril in the Portrait Gallery" },
     },
     {
         name: "Tirana", country: "Albania", lng: 19.8181, lat: 41.3283,
+        sources: ["wiki-settlements", "wiki-aromanians", "wiki-albania", "columbia"],
         text: "A modern city with a substantial Aromanian community, the result of 20th-century migrations.",
     },
     {
         name: "Elbasan", country: "Albania", lng: 20.0806, lat: 41.1111,
+        sources: ["wiki-settlements", "wiki-aromanians", "wiki-albania", "columbia"],
         text: "A modern city with a substantial Aromanian community, the result of 20th-century migrations.",
     },
 
     // North Macedonia
     {
         name: "Kruševo", aromanian: "Crușova", country: "North Macedonia", lng: 21.2483, lat: 41.37,
+        sources: ["wiki-settlements", "wiki-macedonia", "columbia", "diaconescu", "wiki-people"],
         text: "The political and cultural centre of the Aromanians in North Macedonia, where Aromanian is a co-official language.",
         didYouKnow: "In 1903 it was at the heart of the Ilinden Uprising. The painter Nikola Martin was born here, and the singer Toše Proeski grew up here.",
         link: { href: "/personalities", label: "Read about Nikola Martin and Toše Proeski" },
     },
     {
         name: "Bitola", aromanian: "Monastir", country: "North Macedonia", lng: 21.3347, lat: 41.0319,
+        sources: ["wiki-settlements", "wiki-macedonia", "columbia", "eminescu", "wiki-people"],
         text: "A historic diplomatic city with a prominent, long-standing Aromanian community.",
         didYouKnow: "The Manaki brothers had their photography studio here, and a Romanian high school taught Aromanian pupils.",
         link: { href: "/personalities", label: "See the Manaki brothers in the Portrait Gallery" },
     },
     {
         name: "Štip", country: "North Macedonia", lng: 22.1936, lat: 41.7375,
+        sources: ["wiki-settlements", "wiki-macedonia", "columbia"],
         text: "Home to a significant share of the country's recognised Aromanian minority.",
     },
     {
         name: "Skopje", country: "North Macedonia", lng: 21.4317, lat: 41.9961,
+        sources: ["wiki-settlements", "wiki-macedonia", "columbia"],
         text: "The capital, home to a significant share of the country's recognised Aromanian minority.",
     },
 
     // Romania
     {
         name: "Constanța", country: "Romania", lng: 28.6333, lat: 44.1667,
+        sources: ["wiki-settlements", "wiki-people"],
         text: "This port city in Dobruja and the area around it became the main destination for thousands of Aromanians who left the southern Balkans in the early 20th century.",
         didYouKnow: "The tennis player Simona Halep, was born here.",
         link: { href: "/personalities", label: "See Simona Halep in the Portrait Gallery" },
     },
 
     {
+        name: "Tulcea", country: "Romania", lng: 28.8036, lat: 45.1775,
+        sources: ["diaconescu", "marcu", "aspecte"],
+        text: "A port town on the Danube, at the edge of the Danube Delta in northern Dobruja. Many Aromanian families moved to this region after 1940, when Romania gave Southern Dobruja to Bulgaria and the settlers of the 1920s had to leave their new homes.",
+        didYouKnow: "Aromanian communities still live in the villages around Tulcea, such as Cataloi, and Aromanian folk songs were recorded in the county in 1978 for a Romanian folklore archive.",
+    },
+
+    {
         name: "Bucharest", aromanian: "Bucureshti", country: "Romania", lng: 26.1025, lat: 44.4325,
+        sources: ["diaconescu", "wiki-society"],
         text: "The Romanian capital, where many Aromanians have moved over the years, from merchants and students in the 19th century to families from Dobruja and the Balkans in the 20th.",
         didYouKnow: "The Macedo-Romanian Cultural Society, founded here in 1879, still has its headquarters in Bucharest. It started most of the early Aromanian newspapers.",
     },
@@ -130,10 +157,12 @@ const PLACES = [
     // Bulgaria
     {
         name: "Peshtera", country: "Bulgaria", lng: 24.3, lat: 42.0333,
+        sources: ["wiki-settlements", "eminescu"],
         text: "A town in the western Rhodope mountains, where descendants of Aromanian migrants from the Gramos mountains settled.",
     },
     {
         name: "Rakitovo", country: "Bulgaria", lng: 24.0833, lat: 41.9833,
+        sources: ["wiki-settlements"],
         text: "A town in the western Rhodope mountains, where descendants of Aromanian migrants from the Gramos mountains settled.",
     },
 ]
@@ -337,6 +366,7 @@ const SOURCES = [
     { key: "wiki-macedonia", short: "Wikipedia, Aromanians in North Macedonia", label: "Wikipedia, “Aromanians in North Macedonia”", url: "https://en.wikipedia.org/wiki/Aromanians_in_North_Macedonia" },
     { key: "wiki-society", short: "Wikipedia, Macedo-Romanian Cultural Society", label: "Wikipedia, “Macedo-Romanian Cultural Society”", url: "https://en.wikipedia.org/wiki/Macedo-Romanian_Cultural_Society" },
     { key: "columbia", short: "Columbia University", label: "Columbia University, “Aromanians”", url: "http://www.columbia.edu/cu/romanian/articles/aromani.html" },
+    { key: "wiki-samarina", short: "Wikipedia, Samarina", label: "Wikipedia, “Samarina”", url: "https://en.wikipedia.org/wiki/Samarina" },
     { key: "wiki-people", short: "Wikipedia, List of Aromanians", label: "Wikipedia, “List of Aromanians”, and the articles on the people in the “Did you know?” notes", url: "https://en.wikipedia.org/wiki/List_of_Aromanians" },
     { key: "eminescu", short: "Eminescu", label: "Mihai Eminescu, Românii Peninsulei Balcanice (newspaper articles, 1876–1882), quoting F. Kanitz" },
 ]
@@ -644,6 +674,9 @@ export default function History() {
                                                         <span aria-hidden className="h-1.5 w-1.5 shrink-0 rotate-135 border-t-2 border-l-2 border-current transition-transform group-hover:translate-x-1" />
                                                     </Link>
                                                 )}
+                                                <div className="mt-4 border-t border-rose-950/15 pt-2">
+                                                    <SourceTag sourceKey={place.sources} />
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
@@ -651,7 +684,6 @@ export default function History() {
                             )
                         })}
                     </div>
-                    <SourceTag sourceKey={["farsharotu", "bluebird", "wiki-settlements", "wiki-aromanians", "wiki-albania", "wiki-macedonia", "wiki-society", "columbia", "wiki-people"]} />
                 </section>
 
                 <section aria-labelledby="sources" className="mx-auto max-w-5xl border-t border-yellow-600/30 px-5 py-16">
