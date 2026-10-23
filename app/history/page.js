@@ -614,7 +614,7 @@ export default function History() {
 
                     <div className="mt-10 border-8 border-double border-yellow-600 bg-yellow-900 p-1.5 shadow-xl ring-1 ring-yellow-950">
                         <div className="h-120 overflow-hidden bg-orange-50">
-                            <Map center={[23.2, 41.6]} zoom={5.2} theme="light">
+                            <Map center={[23.2, 41.6]} zoom={5} theme="light">
                                 <MapControls position="top-right" showZoom showFullscreen />
 
                                 {PLACES.map((place) => (
