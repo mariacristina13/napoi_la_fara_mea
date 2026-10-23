@@ -19,10 +19,11 @@ export function Ornament({ light = false, start = false, stretch = false, classN
 }
 
 // A full-width band of diamonds, like the embroidered border of a traditional costume.
+// 200 diamonds (20px each with the gap) fill screens up to 4000px wide; on smaller screens the rest are hidden.
 export function EmbroideryBand() {
     return (
         <div aria-hidden className="flex h-7 w-full items-center justify-center gap-2.5 overflow-hidden border-y-2 border-gold bg-rose-950">
-            {Array.from({ length: 80 }, (_, i) => (
+            {Array.from({ length: 200 }, (_, i) => (
                 <span key={i} className={`h-2.5 w-2.5 shrink-0 rotate-45 ${i % 2 === 0 ? "bg-gold" : "border border-orange-50"}`} />
             ))}
         </div>
